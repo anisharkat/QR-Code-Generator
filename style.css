@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+    --bg-black-900:#f2f2fc;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;
+    --skin-color:#0F5298;
+    
+}
+body.dark {
+        --bg-black-900:#151515;
+        --bg-black-100:#222222;
+        --bg-black-50:#393939;
+        --text-black-900:#ffffff;
+        --text-black-700:#e9e9e9e9;
+        --skin-color:#3C99DC;
+        transition: all 0.7s ease;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','sans-serif';
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--bg-black-900);
+    transition: all 0.7s ease;
+}
+.wrapper {
+    background-color: var(--bg-black-100);
+    border: 2px solid var(--bg-black-50);
+    height: 260px;
+    max-width: 410px;
+    border-radius: 30px ;
+    padding: 16px 25px;
+    transition: all 0.3s ease;
+}
+.wrapper.active{
+    height: 580px;
+}
+
+header h1{
+    color:var(--skin-color);
+}
+header p{
+    margin-top: 5px;
+    color: var(--text-black-700);
+    font-size: 16px;
+}
+.wrapper .form {
+    margin: 20px 0 30px;
+}
+.form :where(input,button){
+    width: 100%;
+    height: 42px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+.form input {
+    background-color: var(--bg-black-900);
+    font-size: 18px;
+    padding: 0 17px;
+    border: 1px solid var(--bg-black-50);
+    color: var(--text-black-700);
+}
+.form button {
+    background-color: var(--bg-black-700);
+    margin-top: 10px;
+    font-weight: 550;
+    color: var(--skin-color);
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 17px;
+    border: 2px solid var(--bg-black-50);
+}
+.form button:hover {
+    color: var(--text-black-900);
+    border: 2px solid var(--skin-color);
+    transition: all 0.9s ease;
+}
+.wrapper .qr-code {
+    opacity: 0;
+    pointer-events: none;
+    padding: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--bg-black-50);
+    border-radius: 25px;
+}
+.wrapper.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.5s ease;
+}
+.wrapper .qr-code img {
+    border: 3px solid var(--bg-black-50);
+
+}
+.day-night{
+    background-color: var(--bg-black-50);
+    border-radius: 50%;
+    color: var(--text-black-900);
+    position: fixed;
+    right: 25px;
+    top: 25px;
+    
+}
+.day-night .fas {
+    font-size: 25px;
+    padding: 7px;
+    cursor: pointer;
+    
+}
